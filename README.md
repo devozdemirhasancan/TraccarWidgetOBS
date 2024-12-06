@@ -1,4 +1,4 @@
-# Traccar OBS Widget with NODE
+# Traccar OBS Widget with Node.js
 
 Real-time vehicle tracking system with an interactive map interface. This project provides a game-like overlay displaying vehicle location, speed, weather, and street information.
 
