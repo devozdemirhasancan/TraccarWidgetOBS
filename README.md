@@ -31,10 +31,10 @@ npm install
 
 3. Create a `.env` file in the root directory with the following content:
 
-TRACCAR_API_URL=your_traccar_api_url
-TRACCAR_TOKEN=your_traccar_token
-TRACCAR_DEVICE_ID=your_device_id
-PORT=3000
+- `TRACCAR_API_URL`=your_traccar_api_url
+- `TRACCAR_TOKEN`=your_traccar_token
+- `TRACCAR_DEVICE_ID`=your_device_id
+- `PORT`=3000
 
 4. Start the development server:
 npm run dev
