@@ -84,6 +84,28 @@ For development, the project uses:
 - dotenv for environment variables
 - nodemon for development auto-reload
 
+ ## Testing
+ 
+ Run tests:
+ ```bash
+ npm test
+ ```
+ 
+ Run tests in watch mode:
+ ```bash
+ npm run test:watch
+ ```
+ 
+ Run linting:
+ ```bash
+ npm run lint
+ ```
+ 
+ Fix linting issues:
+ ```bash
+ npm run lint:fix
+ ```
+
 ## Contributing
 
 1. Fork the repository
