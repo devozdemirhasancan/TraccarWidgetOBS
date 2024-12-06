@@ -251,4 +251,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         })
         .catch(error => console.error('Başlangıç yüklemesi hatası:', error));
     startPolling();
-}); 
+});
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        createUIElement,
+        WeatherService,
+        updateMarker,
+        updateMapView,
+        createVehicleIcon,
+        shouldUpdatePosition
+    };
+} 
