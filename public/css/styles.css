@@ -1,0 +1,143 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: transparent;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+#map { 
+    width: 600px;
+    height: 400px;
+    position: fixed;
+    background: transparent;
+    z-index: 1;
+}
+
+/* Hız göstergesi - Sol alt köşe */
+#speed-box {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
+}
+
+.speed-value {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FF3B30;
+    margin-bottom: 5px;
+}
+
+.speed-unit {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Pusula - Sağ üst köşe */
+#compass {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#compass::after {
+    content: '↑';
+    color: #FF3B30;
+    font-size: 24px;
+}
+
+/* Hava durumu - Sol üst köşe */
+#weather-box {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-icon {
+    font-size: 24px;
+}
+
+.weather-temp {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Sokak adı - Üst orta */
+#street-name {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    max-width: 300px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Hız efekti */
+.speed-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.speed-effect.active {
+    opacity: 0.3;
+    background: radial-gradient(circle at center, transparent 0%, rgba(255, 59, 48, 0.3) 100%);
+}
+
+/* Harita döndürme container'ı */
+.map-rotate-container {
+    width: 900px; /* Daha büyük tutuyoruz ki dönüşlerde boşluk görünmesin */
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sağ alt köşedeki vehicle-stats'i kaldır */
+#vehicle-stats {
+    display: none;
+}
+  
