@@ -21,7 +21,8 @@ Real-time vehicle tracking system with an interactive map interface. This projec
 
 ## Installation
 
-1. Clone the repository: 
++### Local Development
+ 1. Clone the repository: 
 git clone [repository-url]
 cd TraccarWidgetOBS
 
@@ -38,6 +39,17 @@ npm install
 
 4. Start the development server:
 npm run dev
+
++### Deploy with Coolify
++1. Fork this repository
++2. Create a new service in Coolify
++3. Select your forked repository
++4. Set the required environment variables:
++   - TRACCAR_API_URL
++   - TRACCAR_TOKEN
++   - TRACCAR_DEVICE_ID
++   - PORT
++5. Deploy the application
 
 ## Configuration
 
