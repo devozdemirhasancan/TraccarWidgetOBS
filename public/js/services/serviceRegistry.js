@@ -1,9 +1,9 @@
-import WeatherService from './weatherService.js';
-import TraccarService from './traccarService.js';
+import WeatherManager from '../managers/WeatherManager.js';
+import TraccarManager from '../managers/TraccarManager.js';
 
 const ServiceRegistry = {
-    WeatherService,
-    TraccarService,
+    WeatherManager,
+    TraccarManager,
 };
 
 export default ServiceRegistry;

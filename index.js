@@ -15,7 +15,6 @@ app.get('/config', (req, res) => {
         TRACCAR_API_URL: process.env.TRACCAR_API_URL,
         TRACCAR_TOKEN: process.env.TRACCAR_TOKEN,
         TRACCAR_DEVICE_ID: process.env.TRACCAR_DEVICE_ID,
-        WEATHER_API_URL: ServiceRegistry.WeatherService.WEATHER_API_URL,
         MAP_THEME: process.env.MAP_THEME || 'default'
     });
 });

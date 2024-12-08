@@ -1,0 +1,31 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: rgba(0, 0, 0, 0.8);
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+#map { 
+    filter: brightness(0.8) saturate(1.2);
+}
+
+#speed-box {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.speed-value {
+    color: #00ff00;
+}
+
+#compass {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+}
+
+#compass::after {
+    color: #00ff00;
+} 
