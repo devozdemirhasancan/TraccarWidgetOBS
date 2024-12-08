@@ -1,27 +1,31 @@
-require('dotenv').config();
-const express = require('express');
-const path = require('path');
+import 'dotenv/config'; // Use import for dotenv
+import express from 'express'; // Use import for express
+import path from 'path'; // Use import for path
+import ServiceRegistry from './public/js/services/serviceRegistry.js'; // Use import for ServiceRegistry
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Statik dosyalar için public klasörünü kullan
+// Serve static files from the public directory
 app.use(express.static('public'));
 
-// Config değerlerini client'a gönder
+// Send config values to the client
 app.get('/config', (req, res) => {
     res.json({
         TRACCAR_API_URL: process.env.TRACCAR_API_URL,
         TRACCAR_TOKEN: process.env.TRACCAR_TOKEN,
-        TRACCAR_DEVICE_ID: process.env.TRACCAR_DEVICE_ID
+        TRACCAR_DEVICE_ID: process.env.TRACCAR_DEVICE_ID,
+        WEATHER_API_URL: ServiceRegistry.WeatherService.WEATHER_API_URL,
+        MAP_THEME: process.env.MAP_THEME || 'default'
     });
 });
 
-// Ana route
+// Main route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
 });
 
-// Sunucuyu başlat
+// Start the server
 app.listen(port, () => {
-    console.log(`Sunucu http://localhost:${port} adresinde çalışıyor`);
+    console.log(`Server is running at http://localhost:${port}`);
 });
